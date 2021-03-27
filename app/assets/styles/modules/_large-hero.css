@@ -1,18 +1,23 @@
 .large-hero {
-    position: relative;
     border-bottom: 10px solid $mainBlue;
 
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+
     &__image {
-        display: block;
+        grid-area: 1 / 1 / -1 / -1;
+
+        img{
+            display: block;
+        }
     }
 
     &__text-content {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
+        padding-top: 60px;
         text-align: center;
-        transform: translateY(-50%);
+
+        grid-area: 1 / 1 / -1 / -1;
     }
 
     &__title {

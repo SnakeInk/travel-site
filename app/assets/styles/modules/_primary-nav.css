@@ -1,0 +1,46 @@
+.primary-nav {
+    padding-top: 20px;
+
+    @mixin  atMedium {
+        padding-top: 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        
+        li {
+            list-style: none;
+            display: inline-block;
+            padding-right: 20px;
+
+            @mixin atMedium {
+                padding-right: 20px;
+            }
+
+            &:last-child {
+                padding-right: 0;
+
+                @mixin atMedium {
+                    padding-right: 20px;
+                }
+            }
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            padding: 5px 8px;
+            font-size: .9rem;
+            background-color: rgba(47, 85, 114, .6);
+
+            @mixin atMedium {
+                padding: 11.5px 0;
+                font-size: 1rem;
+                background-color: transparent;
+            }
+        }
+    }
+}
